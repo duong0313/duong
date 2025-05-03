@@ -1,0 +1,42 @@
+
+body {
+    background-color: #2e3b4e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #3e4e63;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hiệu ứng tuyết */
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    user-select: none;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}

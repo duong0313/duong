@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Cá Nhân DUONG QUOC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Blog Cá Nhân DUONG QUOC</h1>
+    <p><a href="/add">+ Đăng bài viết mới</a></p>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p><strong>{{ post.author }}</strong> - {{ post.date }}</p>
+            <p>{{ post.content }}</p>
+            {% if post.image %}
+                <img src="{{ url_for('static', filename=post.image) }}" alt="ảnh">
+            {% endif %}
+            {% if post.music %}
+                <audio autoplay loop controls>
+                    <source src="{{ url_for('static', filename=post.music) }}" type="audio/mpeg">
+                </audio>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <!-- Hiệu ứng tuyết -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let snow = document.createElement('div');
+            snow.className = 'snowflake';
+            snow.textContent = '❄';
+            snow.style.left = Math.random() * 100 + 'vw';
+            snow.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(snow);
+        }
+    </script>
+</body>
+</html>

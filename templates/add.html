@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm bài viết</title>
+</head>
+<body>
+    <h1>Đăng bài viết mới</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <p>Tiêu đề: <input type="text" name="title" required></p>
+        <p>Tác giả: <input type="text" name="author" required></p>
+        <p>Nội dung:</p>
+        <textarea name="content" rows="5" cols="50" required></textarea><br>
+        <p>Ảnh (tùy chọn): <input type="file" name="image"></p>
+        <p>Nhạc (tùy chọn): <input type="file" name="music"></p>
+        <button type="submit">Đăng bài</button>
+    </form>
+    <br><a href="/">Quay về trang chủ</a>
+</body>
+</html>
